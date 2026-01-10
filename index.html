@@ -1,11 +1,20 @@
-<div class="page">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Fantasma</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-<canvas id="ghost"></canvas>
+<body>
 
+    <div class="page"></div>
 
-<script type="x-shader/x-fragment" id="vertShader">
+    <canvas id="ghost"></canvas>
+
+    <script type="x-shader/x-fragment" id="vertShader">
     precision mediump float;
 
     varying vec2 vUv;
@@ -17,8 +26,7 @@
     }
 </script>
 
-
-<script type="x-shader/x-fragment" id="fragShader">
+    <script type="x-shader/x-fragment" id="fragShader">
     precision mediump float;
 
     varying vec2 vUv;
@@ -140,3 +148,9 @@
         gl_FragColor = vec4(color, shape);
     }
 </script>
+
+    <script type="module" src="js/script.js"></script>
+
+</body>
+
+</html>
