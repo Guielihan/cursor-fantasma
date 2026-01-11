@@ -1,4 +1,4 @@
-import GUI from "https://cdn.jsdelivr.net/npm/lil-gui@0.18.2/+esm"
+// Using lil-gui from UMD version loaded in HTML
 
 const canvasEl = document.querySelector("#ghost");
 
@@ -250,7 +250,7 @@ function resizeCanvas() {
 }
 
 function createControls() {
-    const gui = new GUI();
+    const gui = new lil.GUI();
     gui.close();
     gui.add(params, "size", .02, .3, .01)
         .onChange(v => {
